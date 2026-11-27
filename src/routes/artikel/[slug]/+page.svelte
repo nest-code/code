@@ -1,0 +1,22 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	let { data }: { data: PageData } = $props();
+</script>
+
+<svelte:head>
+	<title>{data.article.title} — Ruang Kode</title>
+	<meta name="description" content={data.article.excerpt} />
+	<meta property="og:title" content={data.article.title} />
+	<meta property="og:description" content={data.article.excerpt} />
+</svelte:head>
+
+<main class="article-detail shell">
+	<a class="back-link" href="/artikel/">← Semua artikel</a>
+	<header class="article-detail-head">
+		<p class="article-category">{data.article.category} <span>/</span> {data.article.dateLabel}</p>
+		<h1>{data.article.title}</h1>
+		<p class="article-detail-excerpt">{data.article.excerpt}</p>
+	</header>
+	<article class="prose">{@html data.article.bodyHtml}</article>
+	<a class="back-link bottom-back" href="/artikel/">← Kembali ke catatan</a>
+</main>
