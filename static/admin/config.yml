@@ -1,6 +1,6 @@
 backend:
   name: turbo-github
-  # Ganti setelah site dibuat di dashboard Decap Turbo.
+  # Replace with the Site ID from your existing Decap Turbo site.
   turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
   branch: main
 
@@ -10,6 +10,7 @@ locale: id
 publish_mode: simple
 media_folder: static/uploads
 public_folder: /uploads
+show_preview_links: true
 
 collections:
   - name: articles
@@ -21,11 +22,27 @@ collections:
     extension: md
     format: frontmatter
     slug: "{{slug}}"
-    summary: "{{title}} — {{category}}"
+    summary: "{{title}} · {{language}} · {{category}}"
+    sortable_fields: [date, title, category, language]
+    view_filters:
+      - { label: Draft, field: published, pattern: false }
+      - { label: Terbit, field: published, pattern: true }
     fields:
       - { label: Judul, name: title, widget: string }
+      - label: Bahasa artikel
+        name: language
+        widget: select
+        options:
+          - { label: Bahasa Indonesia, value: id }
+          - { label: English, value: en }
+        default: id
       - { label: Tanggal, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "DD MMMM YYYY", time_format: false }
-      - { label: Kategori, name: category, widget: select, options: [Catatan, Ide Sistem, Studi Kasus, Teknologi] }
-      - { label: Ringkasan, name: excerpt, widget: text }
-      - { label: Dipublikasikan, name: published, widget: boolean, default: false }
-      - { label: Isi Artikel, name: body, widget: markdown }
+      - { label: Kategori (opsional), name: category, widget: string, required: false }
+      - { label: Tag (opsional), name: tags, widget: list, required: false, default: [] }
+      - { label: Ringkasan, name: excerpt, widget: text, hint: Ringkasan singkat yang tampil di daftar artikel dan hasil pencarian. }
+      - { label: Gambar sampul (opsional), name: cover, widget: image, required: false }
+      - { label: Deskripsi gambar (alt text), name: cover_alt, widget: string, required: false }
+      - { label: Judul SEO (opsional), name: seo_title, widget: string, required: false }
+      - { label: Deskripsi SEO (opsional), name: seo_description, widget: text, required: false }
+      - { label: Tampilkan di situs, name: published, widget: boolean, default: false, hint: Draft tidak akan tampil di halaman publik. }
+      - { label: Isi Artikel, name: body, widget: richtext, modes: [rich_text, raw] }

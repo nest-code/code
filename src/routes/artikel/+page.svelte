@@ -20,7 +20,8 @@
 		<div class="article-list">
 			{#each data.articles as article}
 				<a class="article-row" href="/artikel/{article.slug}/">
-					<div><span class="article-category">{article.category}</span><h2>{article.title}</h2><p>{article.excerpt}</p></div>
+					{#if article.cover}<img class="article-row-cover" src={article.cover} alt={article.coverAlt || article.title} loading="lazy" decoding="async" />{/if}
+					<div class="article-row-content" lang={article.language}><div class="article-meta"><span class="article-language">{article.language.toUpperCase()}</span>{#if article.category}<span class="article-category">{article.category}</span>{/if}</div><h2>{article.title}</h2><p>{article.excerpt}</p>{#if article.tags.length}<div class="article-tags">{#each article.tags.slice(0, 4) as tag}<span>{tag}</span>{/each}</div>{/if}</div>
 					<div class="article-row-side"><span>{formatDateLabel(article.date, $language)}</span><b>↗</b></div>
 				</a>
 			{/each}

@@ -41,6 +41,8 @@ Situs tidak memakai database aplikasi. Login dan pengelolaan artikel disediakan 
 
 CMS artikel tersedia di `/admin/`. Decap CMS menyimpan artikel sebagai Markdown di GitHub, kemudian Workers Builds membangun dan menerbitkan perubahan.
 
+Form Artikel menyediakan judul, bahasa, tanggal, kategori bebas, tag, ringkasan, gambar sampul dan teks alternatifnya, metadata SEO opsional, status publikasi, serta isi Markdown. Satu artikel boleh ditulis dalam satu bahasa saja; bahasa Indonesia dan Inggris tidak diwajibkan berpasangan. Kategori juga tidak dibatasi pada daftar topik tertentu.
+
 Untuk mengaktifkan login CMS:
 
 1. Push proyek ke repositori GitHub pada branch `main`.
@@ -50,4 +52,4 @@ Untuk mengaktifkan login CMS:
 5. Ganti `YOUR-SITE` di `site_url` dan `display_url` dengan hostname Worker Anda.
 6. Deploy ulang situs. Buka `/admin/`, lalu masuk dengan akun Decap Turbo Anda untuk membuat dan menerbitkan artikel.
 
-Artikel berstatus draf tidak tampil di situs publik. Artikel yang dipublikasikan akan dirender saat build berikutnya.
+Artikel dengan status **Tampilkan di situs** dimatikan tetap tersimpan sebagai draf dan tidak ditampilkan ke publik. Perubahan CMS menjadi commit GitHub; Cloudflare membangun ulang situs dan merender artikel yang dipublikasikan. Untuk menampilkan gambar, CMS menyimpannya di `static/uploads` dan situs menggunakannya dari `/uploads`.

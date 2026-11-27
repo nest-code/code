@@ -149,10 +149,11 @@
 			<div class="article-grid">
 				{#each data.articles as article}
 					<a class="article-card" href="/artikel/{article.slug}/">
-						<div class="article-card-top"><span>{article.category}</span><span>↗</span></div>
-						<h3>{article.title}</h3>
-						<p>{article.excerpt}</p>
-					<div class="article-date">{formatDateLabel(article.date, $language)}</div>
+						{#if article.cover}<img class="article-card-cover" src={article.cover} alt={article.coverAlt || article.title} loading="lazy" decoding="async" />{/if}
+						<div class="article-card-top"><span class="article-card-meta"><span class="article-language">{article.language.toUpperCase()}</span>{#if article.category}<span>{article.category}</span>{/if}</span><span>↗</span></div>
+						<h3 lang={article.language}>{article.title}</h3>
+						<p lang={article.language}>{article.excerpt}</p>
+						<div class="article-date">{formatDateLabel(article.date, $language)}{#if article.tags.length}<span class="article-card-tags">{article.tags.slice(0, 2).join(' · ')}</span>{/if}</div>
 					</a>
 				{/each}
 			</div>
