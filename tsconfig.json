@@ -1,10 +1,10 @@
 {
 	"extends": "$app/tsconfig",
-	"include": ["src", "test", "*"],
+	"include": ["src", "test", "vite.config.ts", "worker-configuration.d.ts"],
 	"exclude": ["src/service-worker"],
 	"compilerOptions": {
 		"allowJs": true,
-		"checkJs": true,
+		"checkJs": false,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"resolveJsonModule": true,

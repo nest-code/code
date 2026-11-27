@@ -2,6 +2,8 @@
 
 Profil personal dan playground frontend untuk Software Engineer. Dibangun dengan SvelteKit, Svelte, TypeScript, dan Bun; dijalankan sebagai Cloudflare Worker tanpa database aplikasi.
 
+Antarmuka tersedia dalam bahasa Inggris dan Indonesia. Bahasa Inggris menjadi pilihan awal; preferensi bahasa disimpan di browser. Tombol WhatsApp saat ini terhubung ke nomor `081225353640`.
+
 ## Menjalankan lokal
 
 1. Pasang Bun dari https://bun.sh
@@ -29,7 +31,7 @@ Perintah deploy tersebut menjalankan build SvelteKit terlebih dahulu, lalu mengi
 ## Sebelum dipublikasikan
 
 - Ganti nama brand **Ruang Kode** dengan nama yang Anda pilih.
-- Ganti `hello@example.com` dengan alamat kontak Anda.
+- Perbarui nomor WhatsApp di `src/lib/i18n.ts` jika nomor kontak berubah.
 - Ubah proyek contoh yang bertanda **CONCEPT / PLAYGROUND** menjadi karya Anda; label konsep sebaiknya dipertahankan untuk ide yang belum menjadi proyek nyata.
 - Isi tautan profil profesional dan jejaring sosial setelah informasinya tersedia.
 
