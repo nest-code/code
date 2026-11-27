@@ -11,9 +11,10 @@
 	};
 
 	const experiments: Experiment[] = [
-		{ id: 0, className: 'flow-art' },
-		{ id: 1, className: 'atlas-art' },
-		{ id: 2, className: 'inventory-art' }
+		{ id: 0, className: 'pos-art' },
+		{ id: 1, className: 'inventory-art' },
+		{ id: 2, className: 'iot-art' },
+		{ id: 3, className: 'automation-art' }
 	];
 
 </script>
@@ -71,20 +72,23 @@
 			{#each experiments as item, i}
 				{@const project = t.projects[i]}
 				<article class="experiment-card">
-					<a class="experiment-link" href={whatsappUrl(t.whatsappMessage)} aria-label={`${t.contactCta}: ${project.title}`} target="_blank" rel="noreferrer">
+					<a class="experiment-link" href={whatsappUrl(`${t.whatsappMessage} — ${project.title}`)} aria-label={`${project.cta}: ${project.title}`} target="_blank" rel="noreferrer">
 						<div class="experiment-art {item.className}">
-							<div class="art-topline"><span>0{i + 1} / {i === 0 ? 'PRODUCTIVITY' : i === 1 ? 'KNOWLEDGE' : 'OPERATIONS'}</span><span class="art-arrow">↗</span></div>
+							<div class="art-topline"><span>0{i + 1} / CONCEPT STUDY</span><span class="art-arrow">↗</span></div>
 							{#if item.id === 0}
-								<div class="flow-window"><div class="window-head"><i></i><i></i><i></i><span>my workspace</span></div><div class="flow-content"><div class="flow-side"><b>OVERVIEW</b><span>My tasks</span><span>Projects</span></div><div class="flow-main"><small>MONDAY, 09:41</small><b>Good morning<span>,</span><br />let's make progress.</b><div class="flow-bars"><i></i><i></i><i></i></div></div></div></div>
+								<div class="pos-dashboard"><div class="mock-toolbar"><span class="mock-brand"><i></i> daily / POS</span><span>⌕ &nbsp; ⌑ &nbsp; ●</span></div><div class="pos-layout"><div class="pos-products"><small>QUICK SALE</small><div class="product-tiles"><i>☕<b>Latte</b><em>$4.50</em></i><i>🥐<b>Croissant</b><em>$3.00</em></i><i>🍵<b>Matcha</b><em>$5.00</em></i><i>🍰<b>Cheesecake</b><em>$6.00</em></i></div></div><div class="pos-receipt"><small>ORDER #1048</small><b>Current sale</b><span>Latte <i>$4.50</i></span><span>Croissant <i>$3.00</i></span><strong>Total <i>$7.50</i></strong><em>Complete sale&nbsp; →</em></div></div></div>
 							{:else if item.id === 1}
-								<div class="atlas-orbit"><span class="atlas-node node-a">JS</span><span class="atlas-node node-b">UI</span><span class="atlas-node node-c">DB</span><span class="atlas-center">STACK<br />ATLAS</span><i></i></div>
-							{:else}
 								<div class="inventory-ui"><div class="inventory-title"><span>stock / overview</span><b>+ Add item</b></div><strong>Inventory<br />at a glance<span>.</span></strong><div class="inventory-stats"><div><small>ITEMS</small><b>128</b></div><div><small>LOW STOCK</small><b>06</b></div><div><small>ORDERS</small><b>24</b></div></div></div>
+							{:else if item.id === 2}
+								<div class="iot-dashboard"><div class="iot-heading"><span>FIELD MONITOR</span><b><i></i> LIVE</b></div><div class="iot-reading"><small>GREENHOUSE / SENSOR 04</small><strong>24.8<span>°C</span></strong><div class="sensor-wave"><i></i></div></div><div class="iot-metrics"><div><small>HUMIDITY</small><b>64%</b></div><div><small>SOIL</small><b>OPTIMAL</b></div><div><small>SYNC</small><b>NOW</b></div></div></div>
+							{:else}
+								<div class="automation-canvas"><div class="automation-top"><span>FLOW / DAILY REPORT</span><span>•••</span></div><div class="automation-nodes"><div class="automation-node trigger"><i>◷</i><small>Every day</small></div><span class="automation-link-line"></span><div class="automation-node action"><i>▤</i><small>Collect sales</small></div><span class="automation-link-line"></span><div class="automation-node action"><i>✉</i><small>Send summary</small></div></div><div class="automation-status"><i></i> Workflow ready for review</div></div>
 							{/if}
 							<span class="concept-stamp">{t.concept}</span>
 						</div>
 						<div class="experiment-meta"><div><p class="experiment-category">{project.category}</p><h3>{project.title}</h3></div><span class="experiment-number">0{i + 1}</span></div>
 						<p class="experiment-description">{project.description}</p>
+						<span class="experiment-cta">{project.cta} <b>→</b></span>
 					</a>
 				</article>
 			{/each}

@@ -116,3 +116,76 @@ body{background:var(--bg);color:var(--text);transition:background-color .35s eas
 @media(max-width:850px){.stack-inner{grid-template-columns:.7fr 1.3fr;gap:32px}.technology-flow{min-height:350px}.technology-pill{min-height:54px;padding-right:12px;font-size:11px}}
 @media(max-width:640px){.site-header nav .theme-toggle{align-self:flex-start;margin:12px 0 2px}.site-header nav>a.nav-contact{margin-top:12px}.stack-inner{display:block}.stack-intro{margin-bottom:28px}.technology-flow{min-height:330px;margin-inline:-2px;gap:16px;padding:20px 0}.technology-pill{min-height:51px;gap:8px;padding:8px 11px 8px 8px;font-size:10px}.technology-logo{width:30px;height:30px}.technology-logo svg,.technology-logo img{width:19px;height:19px}}
 @media(prefers-reduced-motion:reduce){.technology-track,.technology-pill,.flow-lines path,.technology-flow::before,.technology-flow::after{animation:none!important;will-change:auto}.technology-lane{mask-image:none}.technology-track{width:100%;flex-wrap:wrap;justify-content:center;transform:none!important}.technology-group{justify-content:center;flex-wrap:wrap}.technology-group[aria-hidden='true']{display:none}}
+
+/* Four project concepts, each shown as a visual study rather than a live product. */
+.experiment-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch}
+.experiment-card{display:flex;min-width:0}
+.experiment-link{display:flex;flex:1;flex-direction:column;height:100%}
+.experiment-art{height:220px;border-radius:12px;background-color:var(--panel);border-color:var(--line)}
+.experiment-link:hover .experiment-art{border-color:var(--accent)}
+.art-topline{font-size:7px;color:var(--muted)}
+.experiment-meta{gap:8px;margin-top:16px}
+.experiment-meta h3{font-size:18px;color:var(--text)}
+.experiment-category{font-size:7px;color:var(--accent)}
+.experiment-number{color:var(--muted)}
+.experiment-description{font-size:11px;line-height:1.7;max-width:none;min-height:58px}
+.experiment-cta{display:inline-flex;align-items:center;gap:8px;margin-top:auto;padding-top:15px;color:var(--text);font:600 11px var(--display);transition:color .2s ease,gap .2s ease}
+.experiment-cta b{color:var(--accent);font-size:15px;font-weight:400;transition:transform .2s ease}
+.experiment-link:hover .experiment-cta{color:var(--accent);gap:11px}
+.experiment-link:hover .experiment-cta b{transform:translateX(2px)}
+.pos-art{background:radial-gradient(ellipse at 58% 43%,color-mix(in srgb,var(--accent) 18%,var(--panel)),var(--panel) 72%)}
+.pos-dashboard,.iot-dashboard,.automation-canvas{position:absolute;inset:39px 9% 22px;border:1px solid #d6e1de;border-radius:9px;background:#f8fbfa;color:#20312e;box-shadow:0 16px 35px #081e1a30;overflow:hidden}
+.mock-toolbar{height:25px;display:flex;align-items:center;justify-content:space-between;padding:0 9px;border-bottom:1px solid #e1e9e6;color:#71817d;font:6px var(--mono)}
+.mock-brand{display:flex;align-items:center;gap:4px;color:#253a36;font-weight:600}
+.mock-brand i{width:7px;height:7px;border-radius:2px;background:#168a7f}
+.pos-layout{display:grid;grid-template-columns:1.15fr .8fr;gap:8px;height:calc(100% - 25px);padding:10px}
+.pos-products>small,.pos-receipt>small{font:5px var(--mono);letter-spacing:.09em;color:#82918d}
+.product-tiles{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:6px}
+.product-tiles>i{display:grid;grid-template-columns:19px 1fr;align-items:center;min-width:0;height:42px;padding:4px;border:1px solid #e2eae7;border-radius:5px;background:#fff;font:11px normal}
+.product-tiles b,.product-tiles em{grid-column:2;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:600 5px var(--display);font-style:normal}
+.product-tiles em{color:#74837f;font-weight:400}
+.pos-receipt{display:flex;flex-direction:column;gap:7px;padding:7px;border-radius:6px;background:#edf3f1}
+.pos-receipt>b{font:700 8px var(--display)}
+.pos-receipt>span,.pos-receipt>strong{display:flex;justify-content:space-between;gap:3px;font:5px var(--mono);color:#64736f}
+.pos-receipt>span i,.pos-receipt>strong i{font-style:normal}
+.pos-receipt>strong{padding-top:5px;border-top:1px solid #d6e1de;color:#253a36}
+.pos-receipt>em{margin-top:auto;padding:6px;border-radius:4px;background:#168a7f;color:#fff;text-align:center;font:600 5px var(--display);font-style:normal}
+.inventory-art{background:radial-gradient(ellipse at 52% 42%,color-mix(in srgb,var(--accent) 15%,var(--panel)),var(--panel) 74%)}
+.inventory-ui{top:45px;left:8%;right:8%;padding:12px;border:1px solid #d6e1de;border-radius:9px;background:#f8fbfa;color:#20312e;box-shadow:0 16px 35px #081e1a30;transform:rotate(1deg)}
+.inventory-title{font-size:6px;color:#71817d}
+.inventory-title b{background:#168a7f;color:#fff;font-size:6px}
+.inventory-ui>strong{font-size:16px;letter-spacing:-.6px}
+.inventory-ui>strong span{color:#168a7f}
+.inventory-stats div{background:#e8f0ed;border-radius:4px}
+.inventory-stats small{color:#71817d}
+.inventory-stats b{font-size:10px}
+.iot-art{background:radial-gradient(ellipse at 50% 45%,color-mix(in srgb,#3b9d90 18%,var(--panel)),var(--panel) 72%)}
+.iot-dashboard{inset:39px 9% 22px;padding:12px;border-radius:9px}
+.iot-heading{display:flex;align-items:center;justify-content:space-between;font:6px var(--mono);letter-spacing:.07em;color:#70807c}
+.iot-heading b{display:flex;align-items:center;gap:4px;color:#168a7f;font-size:5px}
+.iot-heading b i,.automation-status i{width:5px;height:5px;border-radius:50%;background:#26a58f;box-shadow:0 0 0 3px #26a58f20}
+.iot-reading{position:relative;margin-top:12px;padding:10px;border-radius:7px;background:linear-gradient(135deg,#e9f4f1,#f7fbfa);overflow:hidden}
+.iot-reading small{display:block;font:5px var(--mono);color:#768782}
+.iot-reading strong{display:block;margin-top:4px;font:700 28px/.95 var(--display);letter-spacing:-1.4px;color:#203a36}
+.iot-reading strong span{font-size:12px;color:#81918c}
+.sensor-wave{position:absolute;right:8px;bottom:14px;width:43%;height:22px;border-bottom:1px solid #168a7f;border-radius:50%;transform:skewY(-12deg)}
+.sensor-wave i{position:absolute;left:31%;top:3px;width:57%;height:20px;border-top:1px solid #168a7f;border-radius:50%;transform:rotate(16deg)}
+.iot-metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:7px}
+.iot-metrics div{padding:6px 4px;border:1px solid #e2eae7;border-radius:5px}
+.iot-metrics small,.iot-metrics b{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.iot-metrics small{font:4px var(--mono);color:#82918d}
+.iot-metrics b{margin-top:3px;font:600 6px var(--display);color:#304440}
+.automation-art{background:radial-gradient(ellipse at 50% 45%,color-mix(in srgb,#708db5 17%,var(--panel)),var(--panel) 72%)}
+.automation-canvas{inset:39px 7% 22px;padding:11px 9px;border-radius:9px;background-color:#f8fbfa;background-image:radial-gradient(#bacbc6 1px,transparent 1px);background-size:12px 12px}
+.automation-top{display:flex;justify-content:space-between;color:#71817d;font:5px var(--mono);letter-spacing:.06em}
+.automation-nodes{display:flex;align-items:center;margin-top:29px}
+.automation-node{display:flex;flex:1;min-width:0;flex-direction:column;align-items:center;gap:4px;padding:7px 3px;border:1px solid #d6e1de;border-radius:6px;background:#fff;box-shadow:0 4px 9px #081e1a0d}
+.automation-node>i{display:grid;width:17px;height:17px;place-items:center;border-radius:5px;background:#e6f4f0;color:#168a7f;font:10px var(--display);font-style:normal}
+.automation-node.trigger>i{background:#eef1fb;color:#647ab0}
+.automation-node small{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#50615d;font:5px var(--display)}
+.automation-link-line{position:relative;flex:none;width:9px;height:1px;background:#8aa69f}
+.automation-link-line::after{position:absolute;right:-1px;top:-2px;width:4px;height:4px;border-top:1px solid #8aa69f;border-right:1px solid #8aa69f;content:'';transform:rotate(45deg)}
+.automation-status{display:flex;align-items:center;gap:6px;margin-top:18px;padding:7px;border-radius:5px;background:#edf5f2;color:#64736f;font:5px var(--mono)}
+@media(max-width:1000px){.experiment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.experiment-art{height:245px}}
+@media(max-width:640px){.experiment-grid{grid-template-columns:1fr}.experiment-art{height:260px}.experiment-description{min-height:0}.pos-dashboard,.iot-dashboard,.automation-canvas{inset:44px 10% 24px}.inventory-ui{top:50px;left:10%;right:10%;padding:16px}.inventory-ui>strong{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.experiment-art,.experiment-cta,.experiment-cta b{transition:none!important}}

@@ -16,9 +16,10 @@ export const copy = {
 		aboutBody: 'I enjoy understanding how things work, finding better ways to solve problems, and building software with a clear purpose. Good software helps people get things done with less friction.',
 		workIndex: '02 / SELECTED WORK', workTitle: 'Problems worth solving.', workIntro: 'A few concepts and experiments exploring practical ways to make everyday tasks easier.',
 		projects: [
-			{ category: 'Product concept · Dashboard', title: 'Flow State', description: 'A workspace concept for seeing tasks, blockers, and project progress in one calm, focused view.' },
-			{ category: 'Knowledge concept · Tech notes', title: 'Stack Atlas', description: 'A small, source-led guide to technologies, what they are useful for, and ideas they can help shape.' },
-			{ category: 'System concept · Operations', title: 'Tiny Inventory', description: 'An inventory concept for recording items, stock movement, and a clear snapshot of daily operations.' }
+			{ category: 'Sales workflow · Concept', title: 'Point of Sale', description: 'Show how a sales workflow can become more organized, from recording transactions to reviewing daily sales.', cta: 'Explore the Workflow' },
+			{ category: 'Stock operations · Concept', title: 'Inventory Management', description: 'Demonstrate ways to track stock, monitor product movement, and reduce manual recordkeeping.', cta: 'See the Approach' },
+			{ category: 'Connected devices · Concept', title: 'Simple IoT Solutions', description: 'Explore how connected devices can help collect data and make everyday monitoring easier.', cta: 'Explore the Concept' },
+			{ category: 'Workflow automation · Concept', title: 'Process Automation', description: 'Illustrate how repetitive tasks can be simplified through practical workflows and software integrations.', cta: 'View the Workflow' }
 		], concept: 'CONCEPT / PLAYGROUND', showcaseNote: 'These are early showcase concepts, not client work or production claims. Details can be replaced with verified projects as they are ready.',
 		approachIndex: '03 / HOW I THINK', approachTitle: 'A thoughtful way to build.',
 		principles: [
@@ -48,9 +49,10 @@ export const copy = {
 		aboutBody: 'Saya senang memahami cara kerja sesuatu, mencari cara yang lebih baik untuk memecahkan masalah, dan membangun software dengan tujuan yang jelas. Software yang baik membantu orang menyelesaikan pekerjaan dengan lebih mudah.',
 		workIndex: '02 / KARYA PILIHAN', workTitle: 'Masalah yang layak diselesaikan.', workIntro: 'Beberapa konsep dan eksperimen tentang cara praktis untuk memudahkan pekerjaan sehari-hari.',
 		projects: [
-			{ category: 'Konsep produk · Dashboard', title: 'Flow State', description: 'Konsep ruang kerja untuk melihat tugas, hambatan, dan perkembangan proyek dalam satu tampilan yang terarah.' },
-			{ category: 'Konsep pengetahuan · Catatan teknologi', title: 'Stack Atlas', description: 'Panduan ringkas berbasis sumber tentang teknologi, kegunaannya, dan ide yang bisa dibangun dengannya.' },
-			{ category: 'Konsep sistem · Operasional', title: 'Tiny Inventory', description: 'Konsep inventaris untuk mencatat barang, pergerakan stok, dan gambaran operasional harian.' }
+			{ category: 'Alur penjualan · Konsep', title: 'Point of Sale', description: 'Tunjukkan bagaimana alur penjualan dapat menjadi lebih tertata, mulai dari mencatat transaksi hingga meninjau penjualan harian.', cta: 'Jelajahi Alurnya' },
+			{ category: 'Operasional stok · Konsep', title: 'Inventory Management', description: 'Tampilkan cara melacak stok, memantau pergerakan produk, dan mengurangi pencatatan manual.', cta: 'Lihat Pendekatannya' },
+			{ category: 'Perangkat terhubung · Konsep', title: 'Simple IoT Solutions', description: 'Jelajahi bagaimana perangkat terhubung dapat mengumpulkan data dan memudahkan pemantauan sehari-hari.', cta: 'Jelajahi Konsep' },
+			{ category: 'Otomasi alur kerja · Konsep', title: 'Process Automation', description: 'Gambarkan bagaimana tugas berulang dapat disederhanakan lewat alur kerja praktis dan integrasi software.', cta: 'Lihat Alurnya' }
 		], concept: 'KONSEP / PLAYGROUND', showcaseNote: 'Ini adalah konsep showcase awal, bukan proyek klien atau klaim aplikasi produksi. Detailnya dapat diganti dengan karya nyata yang sudah terverifikasi.',
 		approachIndex: '03 / CARA BERPIKIR', approachTitle: 'Pendekatan yang penuh pertimbangan.',
 		principles: [
