@@ -6,7 +6,7 @@ export const language = writable<Locale>('en');
 
 export const copy = {
 	en: {
-		nav: { about: 'About', work: 'Selected work', articles: 'Notes', stack: 'Technology', contact: 'Let’s talk' },
+		nav: { about: 'About', work: 'Selected work', articles: 'Notes', stack: 'Technology', contact: 'Let’s talk', lightTheme: 'Switch to light theme', darkTheme: 'Switch to dark theme' },
 		home: {
 		eyebrow: 'SOFTWARE ENGINEER',
 		heroTitle: 'I build practical software that helps solve everyday problems.',
@@ -27,7 +27,7 @@ export const copy = {
 			{ title: 'Build with care.', description: 'Pay attention to details and take responsibility for the result.' },
 			{ title: 'Keep improving.', description: 'Use each project to learn, refine an idea, and find a better way.' }
 		],
-		stackIndex: '04 / TOOLKIT', stackTitle: 'Tools for exploring.', stackBody: 'Technologies I am learning and using in personal experiments. This list is a snapshot, not a claim of professional experience.', stackNote: 'Tech notes will grow alongside future experiments.',
+		stackIndex: '04 / TOOLKIT', stackTitle: 'Tools in motion.', stackBody: 'A moving snapshot of technologies I am exploring in personal experiments. The marks identify tools, not a claim of production experience.', stackNote: 'The flow is decorative. Every logo links to its official technology website.',
 		articlesIndex: '05 / NOTES', articlesTitle: 'Ideas, written clearly.', articlesLink: 'Browse all notes', articlesEmpty: 'Notes and articles will appear here as they are published.', articlesOpen: 'Open the notes page',
 		contactIndex: '06 / NEXT STEP', contactEyebrow: 'HAVE AN IDEA?', contactTitle: 'Let’s make something useful.', contactCta: 'Chat on WhatsApp', whatsappPhone: '+62 812-2535-3640',
 		footer: 'Made with curiosity', backTop: 'Back to top', whatsappLabel: 'Message me on WhatsApp', whatsappMessage: 'Hello, I found your portfolio and would like to talk about a project.'
@@ -38,7 +38,7 @@ export const copy = {
 		}
 	},
 	id: {
-		nav: { about: 'Tentang', work: 'Karya pilihan', articles: 'Catatan', stack: 'Teknologi', contact: 'Mari bicara' },
+		nav: { about: 'Tentang', work: 'Karya pilihan', articles: 'Catatan', stack: 'Teknologi', contact: 'Mari bicara', lightTheme: 'Ganti ke tema terang', darkTheme: 'Ganti ke tema gelap' },
 		home: {
 		eyebrow: 'SOFTWARE ENGINEER',
 		heroTitle: 'Saya membangun software praktis untuk membantu menyelesaikan masalah sehari-hari.',
@@ -59,7 +59,7 @@ export const copy = {
 			{ title: 'Bangun dengan cermat.', description: 'Perhatikan detail dan bertanggung jawab atas hasilnya.' },
 			{ title: 'Terus berkembang.', description: 'Gunakan setiap proyek untuk belajar, menyempurnakan ide, dan menemukan cara yang lebih baik.' }
 		],
-		stackIndex: '04 / TOOLKIT', stackTitle: 'Alat untuk bereksplorasi.', stackBody: 'Teknologi yang sedang saya pelajari dan gunakan dalam eksperimen pribadi. Daftar ini adalah gambaran saat ini, bukan klaim pengalaman profesional.', stackNote: 'Catatan teknologi akan bertambah seiring eksperimen berikutnya.',
+		stackIndex: '04 / TOOLKIT', stackTitle: 'Teknologi yang bergerak.', stackBody: 'Cuplikan teknologi yang sedang saya jelajahi dalam eksperimen pribadi. Logo menunjukkan nama teknologi, bukan klaim pengalaman produksi.', stackNote: 'Aliran ini bersifat dekoratif. Setiap logo mengarah ke situs resmi teknologinya.',
 		articlesIndex: '05 / CATATAN', articlesTitle: 'Ide, ditulis dengan jelas.', articlesLink: 'Lihat semua catatan', articlesEmpty: 'Catatan dan artikel akan muncul di sini setelah dipublikasikan.', articlesOpen: 'Buka halaman catatan',
 		contactIndex: '06 / LANGKAH BERIKUTNYA', contactEyebrow: 'PUNYA IDE?', contactTitle: 'Mari buat sesuatu yang berguna.', contactCta: 'Chat melalui WhatsApp', whatsappPhone: '+62 812-2535-3640',
 		footer: 'Dibuat dengan rasa ingin tahu', backTop: 'Kembali ke atas', whatsappLabel: 'Hubungi saya melalui WhatsApp', whatsappMessage: 'Halo, saya melihat portfolio Anda dan ingin berdiskusi tentang sebuah proyek.'

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { copy, formatDateLabel, language, whatsappUrl } from '../lib/i18n';
+	import { technologyBands } from '../lib/technologies';
 	let { data }: { data: PageData } = $props();
 	const t = $derived(copy[$language].home);
 
@@ -15,7 +16,6 @@
 		{ id: 2, className: 'inventory-art' }
 	];
 
-	const stack = ['TypeScript', 'Svelte', 'Bun', 'Markdown', 'ElysiaJS', 'DrizzleORM'];
 </script>
 
 <svelte:head>
@@ -103,8 +103,36 @@
 
 	<section class="stack-section" id="teknologi">
 		<div class="shell stack-inner">
-			<div class="stack-intro"><p class="section-index">{t.stackIndex}</p><h2>{t.stackTitle}</h2><p>{t.stackBody}</p></div>
-			<div class="stack-display"><div class="stack-top"><span>TECH NOTES</span><span>SELECTED / 06</span></div><div class="stack-list">{#each stack as tech, i}<div class="stack-row"><span class="stack-count">0{i + 1}</span><span class="stack-name">{tech}</span><span class="stack-type">{i < 3 ? 'CORE TOOLING' : i === 3 ? 'CONTENT' : 'REFERENCE'}</span><span class="stack-symbol">↗</span></div>{/each}</div><p class="stack-footnote">{t.stackNote}</p></div>
+			<div class="stack-intro"><p class="section-index">{t.stackIndex}</p><h2>{t.stackTitle}</h2><p>{t.stackBody}</p><p class="stack-footnote">{t.stackNote}</p></div>
+			<div class="technology-flow" aria-label={t.stackTitle}>
+				<svg class="flow-lines" viewBox="0 0 1000 370" preserveAspectRatio="none" aria-hidden="true">
+					<path d="M-20 78 C 110 15, 210 145, 340 78 S 570 18, 700 78 S 890 145, 1020 78" />
+					<path d="M-20 185 C 110 122, 210 252, 340 185 S 570 125, 700 185 S 890 252, 1020 185" />
+					<path d="M-20 292 C 110 229, 210 359, 340 292 S 570 232, 700 292 S 890 359, 1020 292" />
+				</svg>
+				{#each technologyBands as band, bandIndex}
+					<div class="technology-lane lane-{bandIndex + 1}" aria-label={`Technology group ${bandIndex + 1}`}>
+						<div class="technology-track" style={`--flow-duration: ${34 + bandIndex * 5}s; --flow-delay: ${-bandIndex * 7}s`}>
+							{#each [0, 1] as duplicate}
+								<div class="technology-group" aria-hidden={duplicate === 1}>
+									{#each band as technology}
+										<a class="technology-pill" href={technology.icon?.source ?? 'https://elysiajs.com/'} target="_blank" rel="noreferrer" tabindex={duplicate === 1 ? -1 : 0} aria-label={technology.name}>
+											<span class="technology-logo" aria-hidden="true">
+												{#if technology.icon}
+													<svg viewBox="0 0 24 24" focusable="false"><path d={technology.icon.path} /></svg>
+												{:else if technology.imageUrl}
+													<img src={technology.imageUrl} alt="" loading="lazy" decoding="async" />
+												{/if}
+											</span>
+											<span>{technology.name}</span>
+										</a>
+									{/each}
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/each}
+			</div>
 		</div>
 	</section>
 
