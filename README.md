@@ -17,6 +17,15 @@ Perintah proyek:
 - `bun run cf-typegen` — membuat ulang tipe binding Cloudflare
 - `bun run check` — pemeriksaan tipe dan komponen Svelte
 
+### Pengaturan Cloudflare Workers Builds
+
+Di **Workers & Pages → Worker → Settings → Builds**, gunakan branch `main` dan set:
+
+- Build command: kosongkan
+- Deploy command: `bun run deploy`
+
+Perintah deploy tersebut menjalankan build SvelteKit terlebih dahulu, lalu mengirim hasilnya dengan Wrangler. Jika build dan deploy ingin dipisah, gunakan Build command `bun run build` dan Deploy command `npx wrangler deploy`.
+
 ## Sebelum dipublikasikan
 
 - Ganti nama brand **Ruang Kode** dengan nama yang Anda pilih.
