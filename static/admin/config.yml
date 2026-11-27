@@ -4,8 +4,8 @@ backend:
   turbo_site_id: YOUR_DECAP_TURBO_SITE_ID
   branch: main
 
-site_url: https://YOUR-SITE.pages.dev
-display_url: https://YOUR-SITE.pages.dev
+site_url: https://YOUR-SITE.workers.dev
+display_url: https://YOUR-SITE.workers.dev
 locale: id
 publish_mode: simple
 media_folder: static/uploads
